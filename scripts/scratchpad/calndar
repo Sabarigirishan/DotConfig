@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+pids=$(xdotool search --classname calndar)
+for pid in $pids; do
+	echo "Toggle $pid"
+	bspc node $pid --flag hidden --to-monitor focused --focus
+ 	exit 1
+done
+tabbed -c -g 386x324+767+58 -n calndar -r 2 st -w '' -e calcure &

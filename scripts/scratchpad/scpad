@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+if [ -z $1 ]; then
+	echo "Usage: $0 <name of hidden scratchpad window>"
+	exit 1
+fi
+
+pids=$(xdotool search --classname ${1})
+for pid in $pids; do
+	echo "Toggle $pid"
+	bspc node $pid --flag hidden --to-monitor focused --focus
+ 	exit 1
+done
+
+
+if [ -z $2 ]; then
+	tabbed -c -g 1152x648 -n $1 -r 2 st -w '' &
+	exit 1
+else
+	tabbed -c -g 1152x648 -n $1 -r 2 st -w '' -e $2 &
+	exit 1
+fi

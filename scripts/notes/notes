@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# this script is for creating new notes.
+
+touch ~/Notes/"$(date +%d-%m-%y)"
+lines=$(wc -l < ~/Notes/"$(date +%d-%m-%y)")
+echo $lines
+
+if [  $lines -lt 4  ]; then
+  echo  "less than"
+  echo "
+  Added new note at $(date +%I:%M-%p)
+  " > ~/Notes/"$(date +%d-%m-%y)"
+else
+  echo "
+  greater than"
+  echo "
+  Added new note at $(date +%I:%M-%p)
+  " >> ~/Notes/"$(date +%d-%m-%y)"
+fi
+nvim ~/Notes/"$(date +%d-%m-%y)"

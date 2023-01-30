@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ -z $1 ];
+then
+  echo "Provide a directory in .config folder."
+else
+  dirs=$(ls ~/.config)
+  for dir in $dirs; do
+    if [ $dir == $1 ]; then
+      nvim ~/.config/$1
+    fi
+  done
+  echo "Provided directory is not present in .config folder"
+fi
+
+# pids=$(xdotool search --classname ${1})
+# for pid in $pids; do
+# 	echo "Toggle $pid"
+# 	bspc node $pid --flag hidden --to-monitor focused --focus
+#  	exit 1
+# done

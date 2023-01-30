@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# this script is for taking a screenshot of a particular area
+
+rm -f /tmp/temp_a.png
+rm -f /tmp/temp_a-thumb.png
+scrot -pbu "/tmp/temp_a.png" -t 5
+xclip -selection clipboard -target image/png /tmp/temp_a.png -i
+mkdir -p ~/Pictures/Screenshots/"$(date +%m-%Y)"
+cp /tmp/temp_a.png ~/Pictures/Screenshots/"$(date +%m-%Y)"/"Screenshot_$(date +%T_%d-%m-%Y).png"
+dunstify -I /tmp/temp_a-thumb.png "Screenshot taken."
