@@ -1,0 +1,3 @@
+#!/bin/sh
+icon="﨏"
+echo "$icon  $(sensors | grep edge | awk 'NR==1{gsub("+", " "); gsub("\\\\..", " "); print $2}')"
