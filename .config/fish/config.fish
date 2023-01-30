@@ -13,8 +13,6 @@ if test "$DISPLAY" = "" -a "$XDG_VTNR" = 1
         startx
 end
 
-rxfetch
-
 # ╭──────────────╮
 # │ key bindings │
 # ╰──────────────╯
