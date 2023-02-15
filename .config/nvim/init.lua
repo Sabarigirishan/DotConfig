@@ -1,0 +1,5 @@
+require("core.keymap")
+require("core.macro")
+require("core.plug")
+require("core.set")
+require("core.plugins")
