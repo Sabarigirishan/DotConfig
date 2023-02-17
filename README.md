@@ -1,2 +1,0 @@
-# DotConfig
-My dotfiles.
