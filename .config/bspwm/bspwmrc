@@ -41,7 +41,7 @@ bspc rule -a feh state=floating
 bspc rule -a calendar state=floating hidden=on
 bspc rule -a wifi-float state=floating hidden=on
 bspc rule -a dmenu stick=on state=floating center=on rectangle=176x625+0+0
-bspc rule -a fetch border=off state=floating rectangle=355x300+36+115
+bspc rule -a fetch border=off state=floating rectangle=340x240+36+115
 
 #                               ╭─────────────────╮
 #                               │ bspwm autostart │
