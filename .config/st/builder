@@ -1,0 +1,11 @@
+#!/bin/fish
+
+rm config.h &&
+cp config.def.h config.h &&
+if make 2>&1 | grep "Error" >/dev/null
+  echo "Error"
+else
+  sudo make install clean &&
+  rm -f *.rej &&
+  rm -f *.orig
+end
