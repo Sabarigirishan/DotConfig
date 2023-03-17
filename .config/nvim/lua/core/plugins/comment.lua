@@ -16,7 +16,7 @@ require('Comment').setup({
   opleader = {
     ---Line-comment keymap
     line = 'gc',
-    ---Block-comment keymap
+    -- Block-comment keymap
     block = 'gb',
   },
   ---LHS of extra mappings

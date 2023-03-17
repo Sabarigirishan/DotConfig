@@ -12,13 +12,20 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undodir"
+vim.opt.undodir = "/home/sam/.local/share/nvim/undodir"
 vim.opt.undofile = true
+
+-- which-key
+vim.o.timeout = true
+vim.o.timeoutlen = 300
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
