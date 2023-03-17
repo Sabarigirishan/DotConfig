@@ -124,6 +124,21 @@ _G.packer_plugins = {
     path = "/home/sam/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/sam/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lsp-trouble.nvim"] = {
+    loaded = true,
+    path = "/home/sam/.local/share/nvim/site/pack/packer/start/lsp-trouble.nvim",
+    url = "https://github.com/folke/lsp-trouble.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/sam/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/home/sam/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
@@ -138,11 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sam/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  neoformat = {
-    loaded = true,
-    path = "/home/sam/.local/share/nvim/site/pack/packer/start/neoformat",
-    url = "https://github.com/sbdchd/neoformat"
   },
   nvim = {
     loaded = true,
