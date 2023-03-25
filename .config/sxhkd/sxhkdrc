@@ -9,13 +9,17 @@ super + Return
 	tabbed -c -r 2 st -w ''
   # kitty
 
+super +  KP_Enter
+  kitty
+  # tabbed -c -r 2 st -w ''
+
 # browser
 super + b
   librewolf
 
 # emoji picker
-# super + shift + period
-# 	emoji-picker
+super + shift + period
+ 	emoji-picker
 
 # file manager
 super + e
@@ -45,14 +49,17 @@ Print
 super + Print
 	scrot_d
 
-# Emoji picker
-super + .
-	x11-emoji-picker
-
 # Power menu
 ctrl + alt + Delete
 	~/.local/bin/dmenu-power
 
+# Kill a window
+super + x
+  xkill
+
+# Color picker
+super + alt + x
+  colorpicker --one-shot --preview --short | xclip -selection "clipboard"
 
 # color picker with super + shift + x
 
@@ -115,7 +122,7 @@ super + g
 #                                 ╰─────────────╯
 
 # set the window state
-super + {t,shift + t,shift + f,f}
+super + {t,shift + t,f,shift + f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
@@ -135,7 +142,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+super + {_,shift + }z
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
@@ -158,12 +165,12 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #focus the next window in full screen mode
-super + z
-	bspc node -f next.local
+# super + z
+#	 bspc node -f next.local
 
 #focus the previous window in full screen mode
-super + ctrl + z
-	bspc node -f prev.local
+# super + ctrl + z
+# 	bspc node -f prev.local
 
 
 #                                  ╭───────────╮
@@ -193,11 +200,26 @@ super + ctrl + shift + space
 
 
 # Expand/contract a window by moving one of its side outward/inward
-super + ctrl + {h,j,k,l}
-             bspc node -z {left -20 0 || bspc node -z right -20 0, \
-                           bottom 0 20 || bspc node -z top 0 20,\
-                           top 0 -20 || bspc node -z bottom 0 -20,\
-                           right 20 0 || bspc node -z left 20 0}
+# super + ctrl + {h,j,k,l}
+#              bspc node -z {left -20 0 || bspc node -z right -20 0, \
+#                            bottom 0 20 || bspc node -z top 0 20,\
+#                            top 0 -20 || bspc node -z bottom 0 -20,\
+#                            right 20 0 || bspc node -z left 20 0}
+
+# super + ctrl + {h,j,k,l}
+# { bspc node -z right +20 0 || bspc node -z left -20 0, \
+#   bspc node -z top 0 +20   || bspc node -z bottom 0 -20, \
+#   bspc node -z top 0 -20   || bspc node -z bottom 0 +20, \
+#   bspc node -z right -20 0 || bspc node -z left +20 0}
+
+super + ctrl +h
+  ~/.config/sxhkd/expandx.sh
+super + ctrl + j
+  ~/.config/sxhkd/shrinky.sh
+super + ctrl + k
+  ~/.config/sxhkd/expandy.sh
+super + ctrl + l
+  ~/.config/sxhkd/shrinkx.sh
 
 
 # # Shrink focused window.
@@ -240,8 +262,12 @@ super + XF86AudioMute
 
 # fetch
 super + shift + i
-	kitty --class fetch -e fetch
+	st -c fetch -e fetch
 
 # notes
 super + n
 	scpad notes_term notes
+
+# Calculator
+super + c 
+  scpad calc "qalc"
