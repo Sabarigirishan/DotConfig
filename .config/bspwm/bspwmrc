@@ -37,6 +37,8 @@ bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
 bspc rule -a scpad sticky=on state=floating hidden=on
+bspc rule -a *:*:Picture-in-Picture state=floating
+bspc rule -a *:Password:Password state=floating
 bspc rule -a feh state=floating
 bspc rule -a calendar state=floating hidden=on
 bspc rule -a wifi-float state=floating hidden=on
@@ -58,5 +60,6 @@ xwallpaper --center .local/share/background.png &
 libinput-gestures-setup start &
 ~/.config/polybar/launch.sh &
 sxhkd &
+whoogle-search --port 9051 &
 dunst &
 # feh --bg-scale ~/.config/utils/wallpaper.png &
