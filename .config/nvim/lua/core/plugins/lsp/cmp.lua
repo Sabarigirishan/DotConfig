@@ -59,6 +59,6 @@ require('lspconfig')['marksman'].setup {
 require('lspconfig')['clangd'].setup {
   capabilities = capabilities
 }
--- require('lspconfig')['bash_language_server'].setup{
---   capabilities = capabilities
--- }
+require('lspconfig')['bashls'].setup{
+  capabilities = capabilities
+}

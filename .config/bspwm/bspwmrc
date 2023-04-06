@@ -56,7 +56,7 @@ picom &
 numlockx &
 mpd &
 xautolock -time 7 -locker "systemctl hybrid-sleep" &
-xwallpaper --center .local/share/background.png &
+xwallpaper --center ~/.local/share/background.png &
 libinput-gestures-setup start &
 ~/.config/polybar/launch.sh &
 sxhkd &

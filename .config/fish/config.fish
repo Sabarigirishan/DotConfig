@@ -4,7 +4,8 @@
 
 set fish_greeting
 set QT_QPA_PLATFORMTHEME qt5ct
-
+# export TERM=rxvt-unicode
+source /home/sam/.cache/bwsession
 # ╭──────────────────╮
 # │ startup commands │
 # ╰──────────────────╯
@@ -94,7 +95,7 @@ alias icat                                        'kitty +kitten icat'
 alias d                                           'kitty +kitten diff'
 
 # exa
-alias ls                                          'exa -G --icons'
+# alias ls                                          'exa -G --icons'
 alias tree                                        'exa --tree --icons'
 # alias ls                                          '-Dhs'
 
